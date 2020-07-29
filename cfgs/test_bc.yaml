@@ -1,0 +1,18 @@
+MODEL:
+    MODEL_UID: "3D_MIL"
+    ARCH: "i3d"
+    DEPTH: 50
+    NUM_CLASSES: 2
+    PRETRAINED_MODEL_PATH: "experiments/ncov-Epoch_00005_bc_mean.pth"
+
+DATALOADER:
+    BATCH_SIZE_PER_GPU: 1
+    NUM_WORKERS: 8
+    SAMPLE_NUMBER: -1     # All CT images
+
+DATASETS:
+    TEST_DATA_ROOT: "/home/ubuntu/nas/projects/CTScreen/dataset/test-seg.text"
+
+TEST:
+    LOG_FILE: "test.log"
+    RESULE_HOME: "experiments"

@@ -1,0 +1,31 @@
+# For bigger inputs, and fix dropout, keep bn unchanged
+MODEL:
+    MODEL_UID: "3D_MIL"
+    ARCH: "i3d"
+    DEPTH: 50
+    NUM_CLASSES: 2
+
+DATALOADER:
+    TRAIN_CROP_SIZE: [256, 256]
+    #TRAIN_CROP_SIZE: [224, 224]
+    BATCH_SIZE_PER_GPU: 1
+    NUM_WORKERS: 10
+    CLIP_RANGE: [0.3, 0.7]
+
+SOLVER:
+    LEARNING_RATE: 1e-5
+    WEIGHT_DECAY: 0
+    LR_DECAY: 1
+    TRAIN_EPOCH: 50
+    SNAPSHOT_FREQ: 5 
+    SNAPSHOT_HOME: "experiments"
+    SNAPSHOT_MODEL_TPL: "ncov-Epoch_{:05d}_bc_mean.pth"
+    LOG_FILE: "experiments/train_MIL.log"
+    INIT_MODEL_PATH: ""
+    INIT_MODEL_STRICT: "True"
+    RESUME_EPOCH: 0
+
+DATASETS:
+    TRAIN_DATA_ROOT: "/home/ubuntu/nas/projects/CTScreen/dataset/train-seg.text"
+    VAL_DATA_ROOT: "/home/ubuntu/nas/projects/CTScreen/dataset/val-seg.text"
+    CT_KEYDB: "CT_keydb.json"
