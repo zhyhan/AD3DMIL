@@ -34,11 +34,11 @@ If you use this code for your research, please consider citing:
 @ARTICLE{9098062,
   author={Z. {Han} and B. {Wei} and Y. {Hong} and T. {Li} and J. {Cong} and X. {Zhu} and H. {Wei} and W. {Zhang}},
   journal={IEEE Transactions on Medical Imaging}, 
-  title={Accurate Screening of COVID-19 using Attention Based Deep 3D Multiple Instance Learning}, 
+  title={Accurate Screening of COVID-19 Using Attention-Based Deep 3D Multiple Instance Learning}, 
   year={2020},
-  volume={},
-  number={},
-  pages={1-1},}
+  volume={39},
+  number={8},
+  pages={2584-2594},}
 
 ## Contact
 If you have any problem about our code, feel free to contact hanzhongyicn@gmail.com.
